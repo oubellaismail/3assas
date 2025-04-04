@@ -368,4 +368,16 @@ Route::post('/paypal/create', [PaypalController::class, 'createPayment'])->name(
 
 ---
 
-✅ You’re all set! This setup allows you to make PayPal payments in Laravel using the sandbox environment for testing.
+## 🧪 Step 7: Test the Payment Using a Personal Sandbox Account
+
+To test payments:
+
+1. Go to **[PayPal Sandbox Accounts](https://developer.paypal.com/dashboard/accounts)**.
+2. Use the credentials (username & password) for the **Personal** sandbox account to simulate a buyer.
+3. After making a payment, **check the Business account** in the same dashboard to confirm the payment was received.
+
+This allows you to fully test the flow from payment creation to PayPal redirection and success confirmation before going live.
+
+---
+
+✅ You’re all set! You now have a complete PayPal integration in Laravel ready to test and deploy.
