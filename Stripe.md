@@ -21,18 +21,23 @@ composer require stripe/stripe-php
 
 ---
 
-## ⚙️ Step 3: Configure `.env`
+Here's the corrected and polished version of that section for your Markdown documentation:
+
+---
+
+## 🔐 Configure Stripe in `.env`
 
 Add the following keys to your `.env` file:
 
 ```env
 STRIPE_KEY=your_stripe_publishable_key
 STRIPE_SECRET=your_stripe_secret_key
+STRIPE_CURRENCY=usd # Choose your preferred currency (e.g., usd, eur, gbp)
 ```
 
-> ⚠️ Keep your secret key safe. Never expose it in your frontend.
+> ⚠️ **Keep your secret key secure. Never expose it in your frontend or client-side code.**
 
----
+--- 
 
 ## 🧾 Step 4: Create Stripe Controller
 
