@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PaypalController;
+use App\Http\Controllers\StripeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,6 +18,8 @@ Route::post('/logout', [AuthController::class, 'logout']);
 Route::get('/register', [AuthController::class, 'showForm']);
 Route::post('/register', [AuthController::class, 'register']);
 
+
+//paypal
 Route::get('/payment', function() {
     return view('payment.form');
 })->name('payment.form');
@@ -34,5 +37,16 @@ Route::get('/payment/cancel-page', function() {
 })->name('payment.cancel');
 
 Route::get('/payment/error-page', function() {
+    return view('payment.error');
+})->name('payment.error');
+
+
+//stripe
+
+Route::get('/stripe', [StripeController::class, 'index'])->name('stripe.form');
+Route::post('/stripe/checkout', [StripeController::class, 'checkout'])->name('stripe.checkout');
+Route::get('/stripe/success', [StripeController::class, 'success'])->name('stripe.success');
+Route::get('/stripe/cancel', [StripeController::class, 'cancel'])->name('stripe.cancel');
+Route::get('/payment/error', function() {
     return view('payment.error');
 })->name('payment.error');

@@ -1,5 +1,3 @@
-Here’s your **complete Markdown code file** documenting how to integrate PayPal payments in Laravel using the `srmklive/paypal` package, following your exact steps:
-
 # 💸 Laravel PayPal Integration Guide
 
 This guide walks you through setting up PayPal payments in Laravel using the `srmklive/paypal` package.
