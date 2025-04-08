@@ -69,7 +69,7 @@ class PaypalController extends Controller
         
         if (isset($response['status']) && $response['status'] == 'COMPLETED') {
             // Payment successful, clear session
-            session()->forget('paypal_order_id');
+                ()->forget('paypal_order_id');
             
             // Get transaction details
             $captureId = $response['purchase_units'][0]['payments']['captures'][0]['id'];

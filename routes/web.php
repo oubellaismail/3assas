@@ -50,3 +50,10 @@ Route::get('/stripe/cancel', [StripeController::class, 'cancel'])->name('stripe.
 Route::get('/payment/error', function() {
     return view('payment.error');
 })->name('payment.error');
+
+
+Route::get('/admin/dashboard', function () {
+    return response()->json([
+        "message" => "Yes"
+    ]);
+})->middleware('admin');

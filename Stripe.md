@@ -35,6 +35,24 @@ STRIPE_SECRET=your_stripe_secret_key
 STRIPE_CURRENCY=usd # Choose your preferred currency (e.g., usd, eur, gbp)
 ```
 
+Create config/stripe.php file : 
+```bash
+touch config/stripe.php
+```
+
+Paste this : 
+
+```php
+<?php
+
+return [
+    'pk_key' => env('STRIPE_KEY', ''),
+    'sk_key' => env('STRIPE_SECRET', ''),
+    'currency' => env('STRIPE_CURRENCY', 'usd'),
+];
+
+```
+
 > ⚠️ **Keep your secret key secure. Never expose it in your frontend or client-side code.**
 
 --- 
